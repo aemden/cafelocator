@@ -1,16 +1,66 @@
-# React + Vite
+# Cafe Locator (Matcha Finder)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Course: CS 321 — Software Engineering  
+Team: Matcha Finder  
+Sprint 1 Feature: **Real-Time Amenities & Crowd Filter**
 
-Currently, two official plugins are available:
+Cafe Locator is a small web app that helps students and remote workers quickly find a café that fits their work/study needs. It lets users filter cafés by outlets, Wi-Fi quality, noise level, and crowd level, and see a simple details view with live signals and quick reports.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 1. What this app does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Sprint 1 scope = one feature with four user stories:**
 
-## Expanding the ESLint configuration
+- **US-1: Finder Filters (Student)**  
+  Filter cafés by:
+  - Outlets available
+  - Wi-Fi quality (Any / Fast only)
+  - Noise level (Any / Quiet only)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **US-2: Live Crowd (Remote Worker)**  
+  See crowd level and call-readiness:
+  - Max crowd filter: Any / Only low / Low + medium  
+  - Cards show `Crowd: low/medium/high` and `Good for calls / Not great for calls`
+
+- **US-3: Quick Report (Visitor)**  
+  On the details screen:
+  - Tap chips to report **Noise (quiet/normal/loud)**  
+  - **Seating (few/many)**  
+  - **Wi-Fi (OK/weak)**  
+  - Submit updates the café’s recent reports and “updated just now”
+
+- **US-4: Details View (First-time User)**  
+  Shows for the selected café:
+  - Name and distance  
+  - Amenity badges (Outlets, Wi-Fi, Noise)  
+  - Live crowd + call-readiness text  
+  - Recent reports (last 3 quick reports)  
+  - **Navigate** button (currently shows an alert)
+
+All data is stored in a simple in-memory `CAFES` array and React state (no backend yet).
+
+---
+
+## 2. Tech stack
+
+- **Front-end:** React + Vite
+- **Language:** JavaScript (ES6+)
+- **Tooling:** npm
+
+---
+
+## 3. Getting started (local development)
+
+> Requirements: Node.js + npm installed.
+
+```bash
+# clone the repo
+git clone https://github.com/aemden/cafelocator.git
+cd cafelocator
+
+# install dependencies
+npm install
+
+# run the dev server
+npm run dev
