@@ -1,7 +1,7 @@
-# Cafe Locator (Matcha Finder)
+# Cafe Locator 
 
 Course: CS 321 — Software Engineering  
-Team: Matcha Finder  
+Team: Aidan Emden | Mahina Khan | Mahnaz Behrouzi
 Sprint 1 Feature: **Real-Time Amenities & Crowd Filter**
 
 Cafe Locator is a small web app that helps students and remote workers quickly find a café that fits their work/study needs. It lets users filter cafés by outlets, Wi-Fi quality, noise level, and crowd level, and see a simple details view with live signals and quick reports.
